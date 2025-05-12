@@ -1,9 +1,12 @@
 import streamlit as st
 import pandas as pd
-import pickle
+import joblib
 
-# Modeli yükle
-model = pickle.load(open("model.pkl", "rb"))
+# pickle yerine joblib ile yükle
+model = joblib.load("model.pkl")
+
+
+
 
 st.title("Meme Kanseri Durumu Tahmin Uygulaması")
 
